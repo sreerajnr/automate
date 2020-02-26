@@ -46,7 +46,7 @@ export class RunHistoryStore {
       this._nodeHistoryFilter['page'] = 1;
     }
 
-    if (type === 'startDate' || type === 'endDate') {
+    if (type === 'startDate' || type === 'endDate' || type === 'status') {
       this._nodeHistoryCountsFilter[type] = filter;
       this._countsFilter.next(this._nodeHistoryCountsFilter);
     }
