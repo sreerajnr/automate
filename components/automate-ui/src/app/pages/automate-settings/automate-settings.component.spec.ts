@@ -57,7 +57,7 @@ describe('AutomateSettingsComponent', () => {
       ],
       declarations: [
         AutomateSettingsComponent,
-        MockComponent({ selector: 'input', inputs: ['resetOrigin'] }),
+        MockComponent({ selector: 'input', inputs: ['resetOrigin'] })
       ],
       providers: [
         FormBuilder,
