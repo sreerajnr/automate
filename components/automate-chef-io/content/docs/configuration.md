@@ -379,6 +379,21 @@ Uncomment and change settings as needed, and then run `chef-automate config patc
 # key = "-----BEGIN RSA PRIVATE KEY-----\n<your load balancer private key>\n-----END RSA PRIVATE KEY-----\n"
 ```
 
+#### Configure maximum number of inflight data collector requests
+
+You can now specify the maximum number of inflight data collector requests. The default value is sixty times the number of the machine's available CPUs.
+
+```toml
+    [gateway.v1.sys.data_collector.limiter]
+    # Setting disable to true will allow an unbounded number of
+    # data collector requests to remain inflight concurrently.
+    disable = false
+    # max_inflight_requests will set the maximum number of
+    # concurrent inflight data collector requests. By default,
+    # this value is 60 * runtime.CpuCount()
+    max_inflight_requests = 100
+```
+
 ### Troubleshooting
 
 Common syntax errors may cause issues in configuration files:
