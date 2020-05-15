@@ -64,6 +64,7 @@ import { SessionStorageService } from './services/storage/sessionstorage.service
 import { TelemetryService } from './services/telemetry/telemetry.service';
 
 // Requests
+import { AdminKeyRequests } from './entities/reset-admin-key/reset-admin-key.requests';
 import { ApiTokenRequests } from './entities/api-tokens/api-token.requests';
 import { AutomateSettingsRequests } from './entities/automate-settings/automate-settings.requests';
 import { CookbookRequests } from './entities/cookbooks/cookbook.requests';
@@ -283,6 +284,7 @@ import { WelcomeModalComponent } from './page-components/welcome-modal/welcome-m
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25 }) : []
   ],
   providers: [
+    AdminKeyRequests,
     ApiTokenRequests,
     AttributesService,
     AutomateSettingsRequests,
