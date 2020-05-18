@@ -496,6 +496,12 @@ describe File.basename(__FILE__) do
             "e69dc612-7e67-43f2-9b19-256afd385820"
           ],
           "connectionError": "No such container: cc_pggggggggg. (TRUNCATED IN TESTS)",
+          "projectsData": [
+            {
+              "key": "environment",
+              "values": ["trouble"]
+            }
+          ],
           "runData": {},
           "scanData": {
             "id": "some-id",
