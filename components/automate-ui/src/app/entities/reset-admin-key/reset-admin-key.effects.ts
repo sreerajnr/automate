@@ -39,7 +39,7 @@ export class AdminKeyEffects {
       ofType(AdminKeyActionTypes.UPDATE_SUCCESS),
       map(({ payload }: UpdateAdminKeySuccess) => new CreateNotification({
       type: Type.info,
-      message: `Updated admin key ${payload.status}.`
+      message: `Updated organization ${payload.org.name} admin key.`
     })));
 
   @Effect()
@@ -49,7 +49,7 @@ export class AdminKeyEffects {
         const msg = payload.error.error;
         return new CreateNotification({
           type: Type.error,
-          message: `Could not update admin key: ${msg || payload.error}`
+          message: `Could not update organization admin key: ${msg || payload.error}`
         });
       }));
 }
